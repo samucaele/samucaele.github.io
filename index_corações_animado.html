@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Mariane 💜</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, black, rebeccapurple, black);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: slideDown 1.2s ease;
+        }
+
+        .audio-player {
+            margin-top: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .message {
+            font-size: 1.6em;
+            margin: 30px 0;
+            line-height: 1.5;
+            animation: fadeIn 2.5s ease;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeIn 3s ease;
+        }
+
+        .photos img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 12px;
+            margin: 15px 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            color: pink;
+            font-size: 24px;
+            animation: fall 6s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts">
+        <!-- Vários coraçõezinhos flutuando -->
+        <span class="heart" style="left: 5%;">💖</span>
+        <span class="heart" style="left: 15%; animation-delay: 1s;">💗</span>
+        <span class="heart" style="left: 25%; animation-delay: 2s;">💘</span>
+        <span class="heart" style="left: 35%; animation-delay: 3s;">💞</span>
+        <span class="heart" style="left: 45%; animation-delay: 4s;">❤️</span>
+        <span class="heart" style="left: 55%; animation-delay: 1.5s;">💓</span>
+        <span class="heart" style="left: 65%; animation-delay: 2.5s;">💕</span>
+        <span class="heart" style="left: 75%; animation-delay: 3.5s;">💖</span>
+        <span class="heart" style="left: 85%; animation-delay: 0.5s;">💘</span>
+        <span class="heart" style="left: 95%; animation-delay: 2.2s;">💗</span>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Para Mariane 💜</h1>
+            <div class="audio-player">
+                <audio controls>
+                    <source src="so_nos_dois.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </div>
+        <div class="message">
+            Enfim completamos mais um dia dos namorados juntos!<br>
+            Quero que saiba que te amo de maneira complexa, brega e o mais dramática possível!<br>
+            Rumo à eternidade, te amo de verão a verão.
+        </div>
+        <div class="photos">
+            <img src="photo1.jpg" alt="Foto de vocês dois no banco">
+            <img src="photo2.jpg" alt="Beijo no rosto com sorriso">
+            <img src="photo3.jpg" alt="Nova foto 3">
+            <img src="photo4.jpg" alt="Nova foto 4">
+            <img src="photo5.jpg" alt="Nova foto 5">
+            <img src="photo6.jpg" alt="Nova foto 6">
+        </div>
+    </div>
+</body>
+</html>
